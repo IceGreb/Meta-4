@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Meta-4 </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .jumbotron {
+      text-align: center;
+      background-color: #84bb89a1;
+      padding: 2em;
+      border-radius: 10px;
+    }
+    .navbar {
+      margin-bottom: 0;
+    }
+    .btn-center {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .jumbotron h1 {
+      font-size: 2em;
+    }
+    .jumbotron p {
+      font-size: 1.2em;
+    }
+    .custom-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .custom-btn-container button {
+      margin: 0 10px;
+    }
+    .banner {
+      background-color: #84bb89a1; /* Same color as the navbar */
+      padding: 1em 0;
+      color: grey; 
+      text-align: center;
+      width: 100%;
+      font-size: 1.2em; 
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">
+        <img src="assets/images/footer-logo-new.png" alt="Logo">
+        Meta-4
+      </span>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/proteins/all">Browse by Protein</a></li>
+      <li><a routerLink="/domains">Browse by Domain</a></li>
+      <li><a routerLink="/advanced-search">Advanced Search</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="isLoggedIn()"><button class="btn btn-danger" (click)="logout()">Logout</button></li>
+      <li *ngIf="!isLoggedIn()"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><img src="assets/images/ekpa_logo.png" alt="Another Logo" class="navbar-logo"></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" *ngIf="isLoginRoute()">
+  <div class="jumbotron">
+    <h1>Welcome to Meta-4</h1>
+    <p>A database of protein entries derived from metagenomic analysis of UniParc protein sequences, distributed into 4 major domain families: Cocaine Esterases, Feruloyl Esterases, Nattokinases, and Petases - Pet Hydrolases.</p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer class="banner">
+  <div class="container">
+    <p>{{ currentDate }} - Meta-4 Database - Nikolaos Vergoulidis - All Rights Reserved ®</p>
+  </div>
+</footer>
+
+</body>
+</html>

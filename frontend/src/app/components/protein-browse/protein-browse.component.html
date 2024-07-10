@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <title>Browse Proteins by Domain</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Proteins List for Domain: {{ domain }}</h2>
+    <table class="table table-striped table-bordered table-dark">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UniParc ID</th>
+          <th scope="col">Database Cross Reference</th>
+          <th scope="col">Sequence Length</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let protein of proteins; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            <a [routerLink]="['/proteins', protein.uniParcId]">{{ protein.uniParcId }}</a>
+          </td>
+          <td>
+            <ng-container *ngFor="let ref of protein.uniParcCrossReferences">
+              {{ ref.database }}
+            </ng-container>
+          </td>
+          <td>
+            {{ protein.sequence.length }}
+          </td>
+          <td>
+            
+            <button class="btn btn-danger btn-sm" (click)="deleteProtein(protein.uniParcId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="proteins.length === 0" class="text-center">No proteins found.</p>
+  </div>
+</body>
+</html>

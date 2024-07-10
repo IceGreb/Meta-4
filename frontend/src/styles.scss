@@ -1,0 +1,66 @@
+.container {
+  max-width: 1000000px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.center-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.wrap-text {
+  white-space: pre-wrap;       /* CSS3 */
+  white-space: -moz-pre-wrap;  /* Firefox */
+  white-space: -pre-wrap;      /* Opera <7 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* IE */
+}
+
+.container table {
+  width: 100%;
+}
+
+.container td {
+  max-width: 400px;  /* Adjust this value as needed */
+}
+
+.container th {
+  font-weight: bold;
+}
+
+.mat-tab-group, .mat-tab-nav-bar {
+  --mdc-tab-indicator-active-indicator-color: #1548bf; /* Blue color for active indicator */
+  --mat-tab-header-disabled-ripple-color: rgba(255, 255, 255, 0.5);
+  --mat-tab-header-pagination-icon-color: white;
+  --mat-tab-header-inactive-label-text-color: rgba(21, 72, 191, 0.6); /* Light blue for inactive tabs */
+  --mat-tab-header-active-label-text-color: #1548bf; /* Blue for active tabs */
+  --mat-tab-header-active-ripple-color: #1548bf;
+  --mat-tab-header-inactive-ripple-color: #1548bf;
+  --mat-tab-header-inactive-focus-label-text-color: rgba(21, 72, 191, 0.6); /* Light blue for inactive tabs */
+  --mat-tab-header-inactive-hover-label-text-color: rgba(21, 72, 191, 0.6); /* Light blue for inactive tabs */
+  --mat-tab-header-active-focus-label-text-color: #1548bf; /* Blue for active tabs */
+  --mat-tab-header-active-hover-label-text-color: #1548bf; /* Blue for active tabs */
+  --mat-tab-header-active-focus-indicator-color: #1548bf; /* Blue for active tabs */
+  --mat-tab-header-active-hover-indicator-color: #1548bf; /* Blue for active tabs */
+}
+
+.mat-tab-label, .mat-tab-label-active {
+  color: #1548bf !important; /* Ensures the tab label is always blue */
+  font-weight: bold !important;
+}
+
+.btn-group .btn {
+  margin-right: 10px; /* Add some spacing between buttons */
+}
+
+.btn + .btn {
+  margin-left: 20px; /* Adjust the value as needed */
+}

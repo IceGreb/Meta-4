@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <div *ngIf="protein; else loading">
+      <div class="container mt-4">
+        <h2>Protein Details</h2>
+        <mat-tab-group>
+          <mat-tab label="Entry">
+            <div class="tab-content">
+              <table class="table table-striped table-bordered table-dark" *ngIf="!isEditing">
+                <tbody>
+                  <tr>
+                    <th scope="row">UniParc ID</th>
+                    <td>{{ protein.uniParcId }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sequence</th>
+                    <td>{{ protein.sequence.value }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sequence Length</th>
+                    <td>{{ protein.sequence.length }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Molecular Weight</th>
+                    <td>{{ protein.sequence.molWeight }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CRC64</th>
+                    <td>{{ protein.sequence.crc64 }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">MD5</th>
+                    <td>{{ protein.sequence.md5 }}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <form *ngIf="isEditing" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="uniParcId">UniParc ID</label>
+                  <input type="text" id="uniParcId" [(ngModel)]="protein.uniParcId" name="uniParcId" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="oldestCrossRefCreated">Oldest CrossRef Created</label>
+                  <input type="date" id="oldestCrossRefCreated" [(ngModel)]="protein.oldestCrossRefCreated" name="oldestCrossRefCreated" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="mostRecentCrossRefUpdated">Most Recent CrossRef Updated</label>
+                  <input type="date" id="mostRecentCrossRefUpdated" [(ngModel)]="protein.mostRecentCrossRefUpdated" name="mostRecentCrossRefUpdated" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="sequenceValue">Sequence</label>
+                  <textarea id="sequenceValue" [(ngModel)]="protein.sequence.value" name="sequenceValue" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="sequenceLength">Sequence Length</label>
+                  <input type="number" id="sequenceLength" [(ngModel)]="protein.sequence.length" name="sequenceLength" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="molWeight">Molecular Weight</label>
+                  <input type="number" id="molWeight" [(ngModel)]="protein.sequence.molWeight" name="molWeight" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="crc64">CRC64</label>
+                  <input type="text" id="crc64" [(ngModel)]="protein.sequence.crc64" name="crc64" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="md5">MD5</label>
+                  <input type="text" id="md5" [(ngModel)]="protein.sequence.md5" name="md5" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary" (click)="cancelEditing()">Cancel</button>
+              </form>
+            </div>
+          </mat-tab>
+          <mat-tab label="Features">
+            <div class="tab-content">
+              <table class="table table-striped table-bordered table-dark">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>InterPro Group</th>
+                    <th>Position(s)</th>
+                    <th>Database identifier</th>
+                    <th>Database</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let feature of protein.sequenceFeatures">
+                    <td>{{ feature.interproGroup.name }}</td>
+                    <td>
+                      <span *ngFor="let loc of feature.locations">{{ loc.start }}-{{ loc.end }}<br /></span>
+                    </td>
+                    <td>{{ feature.databaseId }}</td>
+                    <td>{{ feature.database }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+
+      <div class="container mt-4">
+        <div *ngIf="!isEditing">
+          <!-- <button class="btn btn-info" (click)="enableEditing()">Edit</button> -->
+        </div>
+      </div>
+    </div>
+    <ng-template #loading>
+      <div class="container mt-4">
+        <p>Loading...</p>
+      </div>
+    </ng-template>
+  </div>
+</body>
+</html>

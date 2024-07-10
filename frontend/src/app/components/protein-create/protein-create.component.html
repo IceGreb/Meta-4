@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <h2>Submit New Protein</h2>
+  <form (ngSubmit)="onSubmit()" #proteinForm="ngForm">
+    <div class="form-group">
+      <label for="uniParcId">UniParc ID</label>
+      <input type="text" id="uniParcId" required [(ngModel)]="protein.uniParcId" name="uniParcId" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="oldestCrossRefCreated">Oldest CrossRef Created</label>
+      <input type="date" id="oldestCrossRefCreated" required [(ngModel)]="protein.oldestCrossRefCreated" name="oldestCrossRefCreated" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="mostRecentCrossRefUpdated">Most Recent CrossRef Updated</label>
+      <input type="date" id="mostRecentCrossRefUpdated" required [(ngModel)]="protein.mostRecentCrossRefUpdated" name="mostRecentCrossRefUpdated" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="sequenceValue">Sequence</label>
+      <textarea id="sequenceValue" required [(ngModel)]="protein.sequence.value" name="sequenceValue" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="sequenceLength">Sequence Length</label>
+      <input type="number" id="sequenceLength" required [(ngModel)]="protein.sequence.length" name="sequenceLength" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="molWeight">Molecular Weight</label>
+      <input type="number" id="molWeight" required [(ngModel)]="protein.sequence.molWeight" name="molWeight" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="crc64">CRC64</label>
+      <input type="text" id="crc64" required [(ngModel)]="protein.sequence.crc64" name="crc64" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="md5">MD5</label>
+      <input type="text" id="md5" required [(ngModel)]="protein.sequence.md5" name="md5" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="collection">Collection</label>
+      <select id="collection" required [(ngModel)]="collection" name="collection" class="form-control">
+        <option value="Cocaine Esterases">Cocaine Esterases</option>
+        <option value="Feruloyl Esterases">Feruloyl Esterases</option>
+        <option value="Nattokinases">Nattokinases</option>
+        <option value="Petases Pet Hydrolases">Petases Pet Hydrolases</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+<div class="container mt-4">
+  <h2>Advanced Search</h2>
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="criteria">
+      <div *ngFor="let criterion of criteria.controls; let i = index" [formGroupName]="i" class="form-group row query-builder__clause">
+        <div class="col-md-2">
+          <select formControlName="logic" class="form-control" *ngIf="i !== 0">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+            <option value="NOT">NOT</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select formControlName="field" class="form-control">
+            <option value="uniParcId">UniParc ID</option>
+            <option value="domain">Domain</option>
+            <option value="sequence.value">Sequence</option>
+            <option value="sequence.length">Sequence Length</option>
+            <option value="sequence.molWeight">Molecular Weight</option>
+            <option value="sequence.crc64">CRC64</option>
+            <option value="sequence.md5">MD5</option>
+            <option value="oldestCrossRefCreated">Oldest CrossRef Created</option>
+            <option value="mostRecentCrossRefUpdated">Most Recent CrossRef Updated</option>
+            <option value="Keyword">Keyword</option> 
+          </select>
+        </div>
+        <div class="col-md-5">
+          <input formControlName="value" class="form-control" placeholder="Enter search value" />
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-danger" (click)="removeCriterion(i)">Remove</button>
+        </div>
+      </div>
+    </div>
+    <div class="button-group">
+      <button type="button" class="btn btn-secondary" (click)="addCriterion()">Add Criteria</button>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+</div>

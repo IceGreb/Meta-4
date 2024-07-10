@@ -1,0 +1,37 @@
+.nowrap {
+  white-space: nowrap;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Ensures a gap between buttons */
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.custom-table {
+  background-color: #f5f5f5;
+
+  th {
+    text-align: center;
+    background-color: #446139e3;
+    color: rgb(255, 255, 255);
+  }
+
+  td {
+    text-align: center;
+    background-color: #e5f8dee3;
+    text-decoration: #050000;
+  }
+
+  .mat-mdc-row {
+    color: #534a4a;
+  }
+}

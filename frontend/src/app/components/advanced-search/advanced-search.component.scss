@@ -1,0 +1,41 @@
+.query-builder {
+  --main-button-color: #88c19d;
+
+  .query-builder__clause {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .query-builder__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Add space between buttons */
+    margin-top: 20px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+
+  .form-row {
+    align-items: center;
+  }
+
+  .form-control {
+    margin-right: 10px;
+  }
+
+  .btn-danger {
+    margin-left: 10px;
+  }
+
+  .btn-primary, .btn-success {
+    margin-top: 10px;
+  }
+}

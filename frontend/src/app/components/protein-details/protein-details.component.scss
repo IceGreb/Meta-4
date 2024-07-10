@@ -1,0 +1,58 @@
+.container {
+    margin-top: 20px;
+ }
+  
+  
+
+  
+  
+  
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    color: #343a40;
+  
+    th {
+      background-color: #424649;
+      color: white;
+      font-weight: bold;
+    }
+  
+    td {
+      white-space: pre-wrap; 
+      word-wrap: break-word;
+    } 
+  }
+::ng-deep .mat-mdc-tab-group, ::ng-deep .mat-mdc-tab-nav-bar {
+    --mdc-tab-indicator-active-indicator-color: #1548bf; 
+    --mat-tab-header-disabled-ripple-color: rgba(255, 255, 255, 0.5);
+    --mat-tab-header-pagination-icon-color: white;
+    --mat-tab-header-inactive-label-text-color: #1548bf; 
+    --mat-tab-header-active-label-text-color: #1548bf; 
+    --mat-tab-header-active-ripple-color: #1548bf;
+    --mat-tab-header-inactive-ripple-color: #1548bf;
+    --mat-tab-header-inactive-focus-label-text-color: rgba(21, 72, 191, 0.6); 
+    --mat-tab-header-inactive-hover-label-text-color: rgba(21, 72, 191, 0.6); 
+    --mat-tab-header-active-focus-label-text-color: #1548bf; 
+    --mat-tab-header-active-hover-label-text-color: #1548bf; 
+    --mat-tab-header-active-focus-indicator-color: #1548bf; 
+    --mat-tab-header-active-hover-indicator-color: #1548bf; 
+    --mat-tab-header-label-text-weight: bold;
+    .mat-mdc-tab {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-decoration: none;
+      background: none;
+      font-family: var(--mat-tab-header-label-text-font);
+      font-size: var(--mat-tab-header-label-text-size);
+      letter-spacing: var(--mat-tab-header-label-text-tracking);
+      line-height: var(--mat-tab-header-label-text-line-height);
+      font-weight: bold(--mat-tab-header-label-text-weight);
+    }
+}
+
+
+
+  

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Protein List</h2>
+    <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[10, 20, 50, 100]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 custom-table">
+      <ng-container matColumnDef="index">
+        <th mat-header-cell *matHeaderCellDef>#</th>
+        <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 + currentPage * pageSize }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="uniParcId">
+        <th mat-header-cell *matHeaderCellDef>UniParc ID</th>
+        <td mat-cell *matCellDef="let element">
+          <a [routerLink]="['/search',  element.uniParcId]">{{ element.uniParcId }}</a>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="databaseCrossReference">
+        <th mat-header-cell *matHeaderCellDef>Database Cross Reference</th>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngFor="let ref of element.uniParcCrossReferences">
+            {{ ref.database }}
+          </ng-container>
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="sequenceLength">
+        <th mat-header-cell *matHeaderCellDef>Sequence Length</th>
+        <td mat-cell *matCellDef="let element">{{ element.sequence.length }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="oldestCrossRefCreated">
+        <th mat-header-cell *matHeaderCellDef>Oldest CrossRef Created</th>
+        <td mat-cell *matCellDef="let element">{{ element.oldestCrossRefCreated }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="mostRecentCrossRefUpdated">
+        <th mat-header-cell *matHeaderCellDef>Most Recent CrossRef Updated</th>
+        <td mat-cell *matCellDef="let element">{{ element.mostRecentCrossRefUpdated }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="btn-group nowrap" role="group">
+            <button class="btn btn-info btn-sm" (click)="editProtein(element.uniParcId)">Edit</button>
+            <button class="btn btn-danger btn-sm ml-2" (click)="deleteProtein(element.uniParcId)">Delete</button>
+          </div>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[10, 20, 50, 100]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+</body>
+</html>
