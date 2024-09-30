@@ -1,0 +1,452 @@
+[{
+  "_id": {
+    "$oid": "667d7fc59d1ab385288bcc22"
+  },
+  "uniParcId": "UPI0018101A1F",
+  "uniParcCrossReferences": [
+    {
+      "database": "UniProtKB/TrEMBL",
+      "id": "A0A7J7G550",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2021-04-07",
+      "lastUpdated": "2024-05-29",
+      "geneName": "HYC85_026826",
+      "proteinName": "PET hydrolase-like domain-containing protein",
+      "organism": {
+        "scientificName": "Camellia sinensis",
+        "commonName": "Tea",
+        "taxonId": 4442
+      }
+    },
+    {
+      "database": "EMBLWGS",
+      "id": "KAF5935697",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2020-09-02",
+      "lastUpdated": "2022-03-29",
+      "geneName": "HYC85_026826",
+      "proteinName": "Uncharacterized protein",
+      "organism": {
+        "scientificName": "Camellia sinensis",
+        "commonName": "Tea",
+        "taxonId": 4442
+      },
+      "proteomeId": "UP000593564",
+      "component": "Unassembled WGS sequence"
+    },
+    {
+      "database": "EMBLWGS",
+      "id": "KAF5935697",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2020-09-02",
+      "lastUpdated": "2022-03-29",
+      "geneName": "HYC85_026826",
+      "proteinName": "Uncharacterized protein",
+      "organism": {
+        "scientificName": "Camellia sinensis",
+        "commonName": "Tea",
+        "taxonId": 4442
+      },
+      "proteomeId": "UP000593564",
+      "component": "Chromosome 13"
+    },
+    {
+      "database": "EMBL_CON",
+      "id": "KAF5935697",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2023-12-22",
+      "lastUpdated": "2023-12-22",
+      "geneName": "HYC85_026826",
+      "proteinName": "Uncharacterized protein",
+      "organism": {
+        "scientificName": "Camellia sinensis",
+        "commonName": "Tea",
+        "taxonId": 4442
+      },
+      "proteomeId": "UP000593564",
+      "component": "Unassembled WGS sequence"
+    },
+    {
+      "database": "EMBL_CON",
+      "id": "KAF5935697",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2023-12-22",
+      "lastUpdated": "2023-12-22",
+      "geneName": "HYC85_026826",
+      "proteinName": "Uncharacterized protein",
+      "organism": {
+        "scientificName": "Camellia sinensis",
+        "commonName": "Tea",
+        "taxonId": 4442
+      },
+      "proteomeId": "UP000593564",
+      "component": "Chromosome 13"
+    },
+    {
+      "database": "EMBL_CON",
+      "id": "KAF5935697",
+      "versionI": 1,
+      "version": 1,
+      "active": false,
+      "created": "2020-10-07",
+      "lastUpdated": "2020-12-02",
+      "geneName": "HYC85_026826",
+      "proteinName": "Uncharacterized protein",
+      "organism": {
+        "scientificName": "Camellia sinensis",
+        "commonName": "Tea",
+        "taxonId": 4442
+      }
+    }
+  ],
+  "sequence": {
+    "value": "MAVSAQAHYLGPLVEPNPENEEERKTVMAVMAEKEHVDSDDDIVAKVMSPSSSSPSSTPTTTTPTTTNVFDVGKYTTLLLSAEPNTCTTKSSLSLPPPKPLLIATPDAAGEFPLLLLLHGYLLYNSFYSQLIRHIASHGFIVIAPQLYTVAGPDSTDEIKSAAAITDWLPSGLHKVLPTHVQPNLTKIGLSGHSRGGKAAFALALGKVTTPSLKFSALIGIDPVDGMDTGKQTPPPVLTYIPHSFNLDMAVLVIGSGLGEVKKNPLFPPCAPKGINHEDFYKECCEPACYFVAKDYGHVDMLDDETKGIRGKTSYCLCKNGKSREPMRRFVGGVMVAFMKAYLEGDSSCLVGIRFGHEVAPVEFQKFDFLE",
+    "length": 371,
+    "molWeight": 40044,
+    "crc64": "DF5144CC02E9EC09",
+    "md5": "09CFCB8442195C0407B905CAE8E1889F"
+  },
+  "sequenceFeatures": [
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "SUPFAM",
+      "databaseId": "SSF53474",
+      "locations": [
+        {
+          "start": 100,
+          "end": 346
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR048264",
+        "name": "Chlorophyllase"
+      },
+      "database": "PIRSF",
+      "databaseId": "PIRSF038128",
+      "locations": [
+        {
+          "start": 45,
+          "end": 371
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR041127",
+        "name": "PET hydrolase-like"
+      },
+      "database": "Pfam",
+      "databaseId": "PF12740",
+      "locations": [
+        {
+          "start": 97,
+          "end": 348
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "Gene3D",
+      "databaseId": "G3DSA:3.40.50.1820",
+      "locations": [
+        {
+          "start": 52,
+          "end": 351
+        }
+      ]
+    }
+  ],
+  "oldestCrossRefCreated": "2020-09-02",
+  "mostRecentCrossRefUpdated": "2024-05-29"
+},
+{
+  "_id": {
+    "$oid": "667d7fc59d1ab385288bcc23"
+  },
+  "uniParcId": "UPI001BF2DCF0",
+  "uniParcCrossReferences": [
+    {
+      "database": "EMBL_CON",
+      "id": "KAG2722269",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2021-06-06",
+      "lastUpdated": "2024-03-25",
+      "geneName": "I3760_02G121300",
+      "proteinName": "Uncharacterized protein",
+      "organism": {
+        "scientificName": "Carya illinoinensis",
+        "commonName": "Pecan",
+        "taxonId": 32201
+      },
+      "proteomeId": "UP000809784",
+      "component": "Chromosome 2"
+    }
+  ],
+  "sequence": {
+    "value": "MPHKITYPKRHESVSIAEHLHQRVMRPSSDAAASATSTNVFEIGKYRTVLQTVEADICRAKSKLPIPPPKPLLVGMPCEAGEFPLLVFLHGYFLYNSFYSQLLQHIASHGFIVVAPQLYTVAGADATGDIKSTAATAKWLSEGLQNVLPPNVRPNLRKLGLAGHSRGGKAAFALALEKAETCLNFSALIGIDPVDGMDKGKQTHPPVLTYVPRSFELDMAVMVIGTGLGEMKKNPLLPACAPKGVNHEDFFNECRAPACYFVAKDYGHLDMLDDDTPGIRGKASYCLCKNGESREPMRRFVAGNVVAFMKAYLLDDNSDLMAIRERPETAPVELRNIEFLGSNLKGNEKCPGPFLEENGAARL",
+    "length": 363,
+    "molWeight": 39667,
+    "crc64": "7E387B977DD735D7",
+    "md5": "7A5A1BFC78F3F67401EDD6403D146D3C"
+  },
+  "sequenceFeatures": [
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "Gene3D",
+      "databaseId": "G3DSA:3.40.50.1820",
+      "locations": [
+        {
+          "start": 55,
+          "end": 329
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR041127",
+        "name": "PET hydrolase-like"
+      },
+      "database": "Pfam",
+      "databaseId": "PF12740",
+      "locations": [
+        {
+          "start": 68,
+          "end": 320
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "SUPFAM",
+      "databaseId": "SSF53474",
+      "locations": [
+        {
+          "start": 76,
+          "end": 273
+        }
+      ]
+    }
+  ],
+  "oldestCrossRefCreated": "2021-06-06",
+  "mostRecentCrossRefUpdated": "2024-03-25"
+},
+{
+  "_id": {
+    "$oid": "667d7fc69d1ab385288bcc24"
+  },
+  "uniParcId": "UPI00146016FB",
+  "uniParcCrossReferences": [
+    {
+      "database": "EnsemblPlants",
+      "id": "mRNA:MD03G0212300",
+      "versionI": 1,
+      "active": true,
+      "created": "2020-03-07",
+      "lastUpdated": "2023-11-21",
+      "organism": {
+        "scientificName": "Malus domestica",
+        "commonName": "Apple",
+        "taxonId": 3750
+      }
+    }
+  ],
+  "sequence": {
+    "value": "MCKEGLLTLRLEDATMGQRFRAEGFSLALSPMALVEKNMSSAQPALTTSVFNLGNCPFKCITEETPLSSCFDSSAPPKPLFIVTPTVAGTYPLILLHHGFYLRNYFYKELLQHIASHGFIAVAPQLCGVVPPCGPEEVESGAKVINWLPKGLQPLLPENVVADFTKFALAGHSRGGKTAFAIALGRAKTSLSLKISLLIGIDPVAGANRYCRTRPRILTYSPQSFDLSIPVIVIGAGLGPEGKNACMSKPCAPDGVNHKDFFYECKPPCAHFVVKDYGHMDMLDDDPQGMVGAVSGCMCKNGTGPRELMRKTVGGIVVAFLNAYLNGDDRDLVAIVGDPDSSPAKLEPVEFIRA",
+    "length": 354,
+    "molWeight": 38047,
+    "crc64": "1042E3C765AC052D",
+    "md5": "F64C09F200E5805258E1A9DF3DBA1BBE"
+  },
+  "sequenceFeatures": [
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "SUPFAM",
+      "databaseId": "SSF53474",
+      "locations": [
+        {
+          "start": 77,
+          "end": 332
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "Gene3D",
+      "databaseId": "G3DSA:3.40.50.1820",
+      "locations": [
+        {
+          "start": 59,
+          "end": 342
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR017395",
+        "name": "Chlorophyllase/cutinase"
+      },
+      "database": "Pfam",
+      "databaseId": "PF07224",
+      "locations": [
+        {
+          "start": 47,
+          "end": 348
+        }
+      ]
+    }
+  ],
+  "oldestCrossRefCreated": "2020-03-07",
+  "mostRecentCrossRefUpdated": "2023-11-21"
+},
+{
+  "_id": {
+    "$oid": "667d7fc69d1ab385288bcc25"
+  },
+  "uniParcId": "UPI000275BF61",
+  "uniParcCrossReferences": [
+    {
+      "database": "UniProtKB/TrEMBL",
+      "id": "K3ZUH1",
+      "versionI": 1,
+      "version": 1,
+      "active": true,
+      "created": "2012-11-28",
+      "lastUpdated": "2024-05-29",
+      "geneName": "LOC101763039",
+      "proteinName": "PET hydrolase-like domain-containing protein",
+      "organism": {
+        "scientificName": "Setaria italica",
+        "commonName": "Foxtail millet",
+        "taxonId": 4555
+      }
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "KQL23617",
+      "versionI": 1,
+      "active": true,
+      "created": "2018-08-01",
+      "lastUpdated": "2023-11-21",
+      "organism": {
+        "scientificName": "Setaria italica",
+        "commonName": "Foxtail millet",
+        "taxonId": 4555
+      }
+    },
+    {
+      "database": "EnsemblPlants",
+      "id": "Si030252m",
+      "versionI": 1,
+      "active": false,
+      "created": "2012-05-27",
+      "lastUpdated": "2018-05-02",
+      "organism": {
+        "scientificName": "Setaria italica",
+        "commonName": "Foxtail millet",
+        "taxonId": 4555
+      }
+    },
+    {
+      "database": "EMBL_CON",
+      "id": "KQL23617",
+      "versionI": 1,
+      "version": 1,
+      "active": false,
+      "created": "2015-11-03",
+      "lastUpdated": "2018-08-29",
+      "geneName": "SETIT_030252mg",
+      "proteinName": "hypothetical protein",
+      "organism": {
+        "scientificName": "Setaria italica",
+        "commonName": "Foxtail millet",
+        "taxonId": 4555
+      },
+      "ncbiGi": "944259360"
+    }
+  ],
+  "sequence": {
+    "value": "MMQDSSTNAIMHRLEYYGNHVLFHHVLHGEELQRELLLVSTCRLQCQRERGMATSVEIMNPSTEVLETAATSVFQPGKLAIEVIPVDHDTNPTPPIPILIASPKDAGTYPVAMLLHGFCLQNHFYKQVLKHIASFGFIMVAPQFHISILAKGDTEDIAAAAEVTDWLAKGLPSILPKGVEPNLSKLALAGHSRGGHTAFSLVLGHGKTNLKFSALIGLDPVAGTGKSSQISPKILTYEPSSFDIAMPVLVIGTGLGEEKKNILFPPCAPKDVNHREFYHECRPPCYYFVTKDYGHLDMLDDDAPKFMTCMCKDGKNCKDLMRRTVAGIMVAFLKAVLNEEDGDLRVIMKDPKLTPTTVDPVEHRLA",
+    "length": 366,
+    "molWeight": 40295,
+    "crc64": "809B7BF397C661A4",
+    "md5": "05D3A3C95DB687B76B5D85C7E6096024"
+  },
+  "sequenceFeatures": [
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "SUPFAM",
+      "databaseId": "SSF53474",
+      "locations": [
+        {
+          "start": 66,
+          "end": 337
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR041127",
+        "name": "PET hydrolase-like"
+      },
+      "database": "Pfam",
+      "databaseId": "PF12740",
+      "locations": [
+        {
+          "start": 94,
+          "end": 344
+        }
+      ]
+    },
+    {
+      "interproGroup": {
+        "id": "IPR029058",
+        "name": "Alpha/Beta hydrolase fold"
+      },
+      "database": "Gene3D",
+      "databaseId": "G3DSA:3.40.50.1820",
+      "locations": [
+        {
+          "start": 60,
+          "end": 352
+        }
+      ]
+    }
+  ],
+  "oldestCrossRefCreated": "2012-05-27",
+  "mostRecentCrossRefUpdated": "2024-05-29"
+}]

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<link href="packages/pdbe-molstar-edited/pdbe-molstar-3.0.0.css" rel="stylesheet" />
+
+<script src="packages/jquery-3.7.1.min.js"></script>
+<script src="packages/pdbe-molstar-edited/pdbe-molstar-plugin-3.0.0.js"></script>
+
+<script src="js/pdbViewer.js"></script>
+</head>
+
+
+<body>
+
+
+<div id='pdbViewer' style='position:relative;max-width:100%;height:350px'></div>
+
+
+
+<div class=''>
+<b>Color by:</b><br>
+<input type='radio' name='pdb_color' id='color_alphafold' value='plddt' onclick='switchColorScheme(pdbViewer, "alphafold")' checked/>&nbsp; pLDDT <br/>
+<input type='radio' name='pdb_color' id='color_structure' value='struc' onclick='switchColorScheme(pdbViewer, "secstruc")' />&nbsp; Structure
+<br><br></div>
+
+<script>
+var pdbViewer = pdbViewer('pdb/UPI001BF2DCF0_filtered_relaxed_rank_001_alphafold2_ptm_model_1_seed_000.pdb');
+</script>
+
+</body>
+</html>

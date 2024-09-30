@@ -34,27 +34,40 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/pdb_test",
+                "output": "assets/pdb_test"
+              }
             ],
             "styles": [
               "src/styles.scss",
-              "@angular/material/prebuilt-themes/purple-green.css"
+              "@angular/material/prebuilt-themes/purple-green.css",
+              "src/assets/pdb_test/packages/pdbe-molstar-edited/pdbe-molstar-3.0.0.css"
               
             ],
-            "scripts": []
+            "scripts": [
+              "assets/pdb_test/packages/jquery-3.7.1.min.js",
+              "assets/pdb_test/packages/pdbe-molstar-edited/pdbe-molstar-plugin-3.0.0.js",
+              "assets/pdb_test/js/pdbViewer.js"
+              
+              
+              
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "25mb",
+                  "maximumError": "30mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "5kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all"

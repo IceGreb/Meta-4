@@ -1,58 +1,74 @@
 .container {
-    margin-top: 20px;
- }
-  
-  
-
-  
-  
-  
-.table {
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: #f8f9fa;
-    color: #343a40;
-  
-    th {
-      background-color: #424649;
-      color: white;
-      font-weight: bold;
-    }
-  
-    td {
-      white-space: pre-wrap; 
-      word-wrap: break-word;
-    } 
-  }
-::ng-deep .mat-mdc-tab-group, ::ng-deep .mat-mdc-tab-nav-bar {
-    --mdc-tab-indicator-active-indicator-color: #1548bf; 
-    --mat-tab-header-disabled-ripple-color: rgba(255, 255, 255, 0.5);
-    --mat-tab-header-pagination-icon-color: white;
-    --mat-tab-header-inactive-label-text-color: #1548bf; 
-    --mat-tab-header-active-label-text-color: #1548bf; 
-    --mat-tab-header-active-ripple-color: #1548bf;
-    --mat-tab-header-inactive-ripple-color: #1548bf;
-    --mat-tab-header-inactive-focus-label-text-color: rgba(21, 72, 191, 0.6); 
-    --mat-tab-header-inactive-hover-label-text-color: rgba(21, 72, 191, 0.6); 
-    --mat-tab-header-active-focus-label-text-color: #1548bf; 
-    --mat-tab-header-active-hover-label-text-color: #1548bf; 
-    --mat-tab-header-active-focus-indicator-color: #1548bf; 
-    --mat-tab-header-active-hover-indicator-color: #1548bf; 
-    --mat-tab-header-label-text-weight: bold;
-    .mat-mdc-tab {
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-decoration: none;
-      background: none;
-      font-family: var(--mat-tab-header-label-text-font);
-      font-size: var(--mat-tab-header-label-text-size);
-      letter-spacing: var(--mat-tab-header-label-text-tracking);
-      line-height: var(--mat-tab-header-label-text-line-height);
-      font-weight: bold(--mat-tab-header-label-text-weight);
-    }
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #faf8fa;
+  color: #343a40;
+  height: 450px; /* Aligns height with the viewer */
+}
 
+.table th {
+  background-color: #424649;
+  color: white;
+  font-weight: bold;
+}
 
-  
+.table td {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium;
+}
+
+.viewer-container {
+  position: absolute;
+  margin-top: 90px;
+  top: 90px; /* Aligns with the table */
+  width: 35%;
+  right: 0;
+  z-index: 1; /* Lower z-index to ensure the title is above */
+}
+
+.viewer-container h2 {
+  text-align: center;
+  margin-top: 10px; /* Keeps title close to the top of the viewer */
+  font-size: 1.5em; /* Adjust font size */
+  padding-bottom: 30px; /* Adds spacing between the title and the viewer */
+  z-index: 2; /* Higher z-index to ensure it's on top */
+  position: relative; /* Ensure it respects z-index and stays above the viewer */
+}
+
+#pdbViewer {
+  width: 100%;
+  margin-top: 90px;
+  right: 0;
+  height: 350px; /* Adjust the height as needed */
+  border: 1px solid #ddd; /* Optional border */
+  z-index: 1; /* Ensure viewer stays behind the title */
+}
+
+.col-md-8 {
+  width: 100%; /* Adjust to leave space for the viewer */
+  padding-right: 50px; /* Space between the table and the viewer */
+}
+
+/* Restore original tab header colors */
+::ng-deep .mat-mdc-tab-group, ::ng-deep .mat-mdc-tab-nav-bar {
+  --mdc-tab-indicator-active-indicator-color: #1548bf;
+  --mat-tab-header-disabled-ripple-color: rgba(255, 255, 255, 0.5);
+  --mat-tab-header-pagination-icon-color: white;
+  --mat-tab-header-inactive-label-text-color: #1548bf;
+  --mat-tab-header-active-label-text-color: #1548bf;
+  --mat-tab-header-active-ripple-color: #1548bf;
+  --mat-tab-header-inactive-ripple-color: #1548bf;
+  --mat-tab-header-inactive-focus-label-text-color: rgba(21, 72, 191, 0.6);
+  --mat-tab-header-inactive-hover-label-text-color: rgba(21, 72, 191, 0.6);
+  --mat-tab-header-active-focus-label-text-color: #1548bf;
+  --mat-tab-header-active-hover-label-text-color: #1548bf;
+  --mat-tab-header-active-focus-indicator-color: #1548bf;
+  --mat-tab-header-active-hover-indicator-color: #1548bf;
+  --mat-tab-header-label-text-weight: bold;
+}

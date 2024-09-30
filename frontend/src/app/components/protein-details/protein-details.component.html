@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Protein Details</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -10,8 +10,8 @@
 </head>
 <body>
   <div class="container mt-4">
-    <div *ngIf="protein; else loading">
-      <div class="container mt-4">
+    <div *ngIf="protein; else loading" class="row">
+      <div class="col-md-8">
         <h2>Protein Details</h2>
         <mat-tab-group>
           <mat-tab label="Entry">
@@ -20,7 +20,11 @@
                 <tbody>
                   <tr>
                     <th scope="row">UniParc ID</th>
-                    <td>{{ protein.uniParcId }}</td>
+                    <td>
+                      <a [href]="'https://www.uniprot.org/uniparc/' + protein.uniParcId" target="_blank">
+                        {{ protein.uniParcId }}
+                      </a>
+                    </td>
                   </tr>
                   <tr>
                     <th scope="row">Sequence</th>
@@ -42,42 +46,17 @@
                     <th scope="row">MD5</th>
                     <td>{{ protein.sequence.md5 }}</td>
                   </tr>
+                  <tr>
+                    <th scope="row">Protein Name</th>
+                    <td>{{ protein.uniParcCrossReferences[0].proteinName }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Organism</th>
+                    <td>{{ protein.uniParcCrossReferences[0].organism.scientificName }}</td>
+                  </tr>
                 </tbody>
               </table>
-
               <form *ngIf="isEditing" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                  <label for="uniParcId">UniParc ID</label>
-                  <input type="text" id="uniParcId" [(ngModel)]="protein.uniParcId" name="uniParcId" class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                  <label for="oldestCrossRefCreated">Oldest CrossRef Created</label>
-                  <input type="date" id="oldestCrossRefCreated" [(ngModel)]="protein.oldestCrossRefCreated" name="oldestCrossRefCreated" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="mostRecentCrossRefUpdated">Most Recent CrossRef Updated</label>
-                  <input type="date" id="mostRecentCrossRefUpdated" [(ngModel)]="protein.mostRecentCrossRefUpdated" name="mostRecentCrossRefUpdated" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="sequenceValue">Sequence</label>
-                  <textarea id="sequenceValue" [(ngModel)]="protein.sequence.value" name="sequenceValue" class="form-control"></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="sequenceLength">Sequence Length</label>
-                  <input type="number" id="sequenceLength" [(ngModel)]="protein.sequence.length" name="sequenceLength" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="molWeight">Molecular Weight</label>
-                  <input type="number" id="molWeight" [(ngModel)]="protein.sequence.molWeight" name="molWeight" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="crc64">CRC64</label>
-                  <input type="text" id="crc64" [(ngModel)]="protein.sequence.crc64" name="crc64" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="md5">MD5</label>
-                  <input type="text" id="md5" [(ngModel)]="protein.sequence.md5" name="md5" class="form-control">
-                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="button" class="btn btn-secondary" (click)="cancelEditing()">Cancel</button>
               </form>
@@ -110,12 +89,13 @@
         </mat-tab-group>
       </div>
 
-      <div class="container mt-4">
-        <div *ngIf="!isEditing">
-          <!-- <button class="btn btn-info" (click)="enableEditing()">Edit</button> -->
-        </div>
+      <!-- Add header and viewer container aligned with the table -->
+      <div class="viewer-container col-md-4">
+        <h2>Predicted 3D Model</h2>
+        <div id='pdbViewer' class="viewer"></div>
       </div>
     </div>
+
     <ng-template #loading>
       <div class="container mt-4">
         <p>Loading...</p>

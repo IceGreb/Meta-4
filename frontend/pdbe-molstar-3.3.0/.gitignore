@@ -1,0 +1,16 @@
+build/
+lib/
+tmp/
+
+node_modules/
+debug.log
+npm-debug.log
+tsconfig.tsbuildinfo
+
+*.sublime-workspace
+.idea
+.DS_Store
+
+# NPM built package
+/package/
+/pdbe-molstar-*.tgz
